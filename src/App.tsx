@@ -1,14 +1,27 @@
-import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import styled, { css } from "styled-components";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const Button = styled.button`
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    margin: 0 1em;
+    padding: 0.25em 1em;
+    ${(props) =>
+      props.primary &&
+      css`
+        background: palevioletred;
+        color: white;
+      `};
+  `;
   return (
-    <div className="App">
+    <header>
       <h1>Hello World!</h1>
-    </div>
+      <Button>Normal Button </Button>
+      <Button primary>Primary Button</Button>
+    </header>
   );
 }
 
