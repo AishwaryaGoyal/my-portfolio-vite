@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-/*About page*/
 export const MainContent = styled.div`
  grid-column: 1/ -1;
  display: grid;
@@ -10,14 +9,15 @@ export const MainContent = styled.div`
  justify-content: center;
  align-items: center;
 
-/*  @media (max-width: 960px) {
+ @media (max-width: 960px) {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin: 0.5rem;
  }
+ 
  @media (max-width: 390px) {
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   margin: 0.2rem;
- } */
+ } 
 `;
 
 export const AboutLeft = styled.div`
@@ -26,12 +26,12 @@ export const AboutLeft = styled.div`
   font-family: "Fruktur";
  }
 
-/*  @media (max-width: 960px) {
+ @media (max-width: 960px) {
   column-count: 1;
  }
  @media (max-width: 390px) {
   column-count: 1;
- } */
+ } 
 `;
 export const AboutRight = styled.div`
   display: flex;

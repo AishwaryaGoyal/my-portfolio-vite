@@ -5,7 +5,11 @@ import MainContent from "../components/about/MainContent";
 import Footer from "../components/common/Footer";
 import {Container as AboutContainer} from "../App.style";
 
-function About(props) {
+interface AboutProps {
+  onAbout?:string;
+}
+
+function About(props:AboutProps) {
   return (
     <AboutContainer>
       <HeaderHandheld />

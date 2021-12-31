@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import CarouselImage from "./CarouselImage";
 import images from "./CarouselImages";
 import radioButtons from "./CarouselRadios";
-import ButtonIcon from "../common/ButtonIcon";
-import {Carousel as DivCarousel, StyledCarouselRadio} from "../../styled-components/home.style";
+import {Carousel as DivCarousel, StyledCarouselRadio, LeftArrowButtonIcon, RightArrowButtonIcon} from "../../styled-components/home.style";
 
 function Carousel() {
   const totalImages = radioButtons.length;
@@ -107,22 +106,22 @@ function Carousel() {
   return (
     <DivCarousel id="carousel" onLoad={onLoadCarousel}>
       <CarouselImage image={images[0]} />
-      <ButtonIcon
+      <LeftArrowButtonIcon
         id="leftArrow"
         className="arrows"
         onClick={leftarrowClicked}
         iClassNames="fas fa-arrow-alt-circle-left fa-2x"
       />
-      <ButtonIcon
+      <RightArrowButtonIcon
         id="rightArrow"
         className="arrows"
         onClick={rightarrowClicked}
         iClassNames="fas fa-arrow-alt-circle-right fa-2x"
       />
       <StyledCarouselRadio
+        className="radios"
         radioButtons={radioButtons}
         onClick={radioClicked}
-        className="radios"
         iClassNames="far fa-square"
       />
     </DivCarousel>

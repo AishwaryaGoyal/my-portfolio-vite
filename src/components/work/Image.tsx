@@ -1,8 +1,15 @@
 import React from "react";
-import Work from "../../pages/Work";
 import {WorksMain, ImgVideoContainer} from "../../styled-components/work.style";
 
-function Image(props) {
+interface ImageProps {
+images: {
+  src:string;
+  alt:string;
+}[];
+onClick(e:Event):void;
+}
+
+function Image(props:ImageProps) {
   const images = props.images.map((prop, index) => (
     <ImgVideoContainer key={index}>
       <img

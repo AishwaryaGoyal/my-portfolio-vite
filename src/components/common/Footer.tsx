@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {StyledFooter, BtnsFooter} from "../../App.style";
 
-function Footer(props) {
+interface FooterProps {
+onHome?: string;
+onAbout?: string;
+}
+
+function Footer(props:FooterProps) {
   return (
     <StyledFooter>
       <BtnsFooter to="/" className={`btn-home-footer ${props.onHome}`}>

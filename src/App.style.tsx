@@ -150,14 +150,23 @@ export const HeaderMiddleButtons = styled(Link)`
   background-color: #dd5350;
   color: white;
  }
+
+ &.onHome {
+  background-color: #dd5350;
+  color: white;
+ }
+
+ &.onWork {
+  background-color: #dd5350;
+  color: white;
+ }
+
+ &.onAbout {
+  background-color: #dd5350;
+  color: white;
+ }
 `;
 
-/*
-.home-btn.onHome,
-.work-btn.onWork,
-.about-btn.onAbout {
-  
-}*/
 export const FaFacebook = styled.i`
  color: #4267b2;
  padding: 0.5rem;
@@ -173,12 +182,12 @@ export const FaFacebook = styled.i`
 export const FaInstagram = styled.i`
  padding: 0.5rem; 
  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
+  circle at 30% 107%,
+#fdf497 0%,
+#fdf497 5%,
+#fd5949 45%,
+#d6249f 60%,
+#285aeb 90%
   );
  -webkit-background-clip: text;
  background-clip: text;
@@ -244,13 +253,17 @@ export const BtnTopHandheld = styled(Link)`
  @media (max-width: 390px) {
   display: none;
  }
-`;
 
-/*
-.btn-work-handheld.onWork,
-.btn-contact-handheld.onContact {
-  
-}
+ &.onWork {
+  color: white;
+  background-color: #dd5350;
+ }
+
+ &.contact {
+  color: white;
+  background-color: #dd5350;
+ }
+`;
 
 /*Footer CSS*/
 export const StyledFooter = styled.footer`
@@ -277,19 +290,22 @@ export const BtnsFooter = styled(Link)`
   color: black;
 
   &:hover {
-    color: white;
+   color: white;
   }
 
   ${props => props.className.includes("btn-home-footer") && css`
   margin-right: 4rem;
   `}
+
+  &.onHome {
+   color: white;
+  }
+
+  &.onAbout {
+   color: white;
+  }
 `;
 
-/* 
-.btn-home-footer.onHome,
-.btn-about-footer.onAbout {
-  
-}*/
 export const BtnMenu = styled(ButtonIcon)`
  text-decoration: none;
  display: none;
@@ -333,10 +349,6 @@ export const BtnMenuDrop = styled(Link)`
 `;
 
 /*
-.fa-bars {
-  color: white;
-}
-
 @media (max-width: 960px) {
   .btn-menu,
   .btn-menu-drop {

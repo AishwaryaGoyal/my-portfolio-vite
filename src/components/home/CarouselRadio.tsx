@@ -1,18 +1,27 @@
 import React from "react";
-//import { RadiosButtonIcon } from "../../styled-components/home.style";
 import ButtonIcon from "../common/ButtonIcon";
 
-function CarouselRadio(props) {
+interface CarouselRadioProps {
+ radioButtons: {
+  id:string;
+  className: string;
+ }[];
+ onClick(e:Event):void;
+ iClassNames:string;
+ className:string;
+}
+
+function CarouselRadio(props:CarouselRadioProps) {
   const radioBtns = props.radioButtons.map((radio) => (
     <ButtonIcon
       id={radio.id}
       key={radio.id}
-      className={props.className}
+      className={`${radio.className} ${props.className}`}
       onClick={props.onClick}
       iClassNames={props.iClassNames}
     ></ButtonIcon>
   ));
-  return <div>{radioBtns}</div>;
+  return <>{radioBtns}</>;
 }
 
 export default CarouselRadio;

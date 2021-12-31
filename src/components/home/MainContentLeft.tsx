@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../common/Button";
 import {IntroText, VLargeText, LargeText, SmallText,BtnContactUs} from "../../styled-components/home.style"
 
 function MainContentLeft() {

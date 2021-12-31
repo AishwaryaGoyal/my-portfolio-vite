@@ -1,7 +1,13 @@
 import React from "react";
 import { FaSquare } from "../../styled-components/home.style";
 
-function ButtonIcon(props) {
+interface ButtonIconProps {
+  id?:string;
+  className?:string;
+  onClick(e:Event):void;
+  iClassNames:string;
+}
+function ButtonIcon(props:ButtonIconProps) {
   return (
     <button
       type="button"

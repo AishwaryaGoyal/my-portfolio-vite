@@ -1,7 +1,7 @@
-import styled, {css, keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Button from "../components/common/Button";
-import CarouselRadio from "../components/home/CarouselRadio";
 import ButtonIcon from "../components/common/ButtonIcon";
+import CarouselRadio from "../components/home/CarouselRadio"
 
 export const IntroText = styled.div`
  display: flex;
@@ -26,7 +26,6 @@ export const LargeText = styled.h2`
  @media (max-width: 390px) {
   font-size: 1rem;
  }
-
 `;
 
 export const SmallText = styled.p`
@@ -97,50 +96,47 @@ export const Colors = styled.div`
  height: 25px;
  transition: all 0.5s ease-in-out;
 
- ${props => {
-  props.className.includes("burntumber") &&
-   css`
-    background-color: #6e260e;
-    &:hover {
-     border: 1px solid #6e260e;
-    }
-   `;
-  props.className.includes("crimsonred") &&
-   css`
-    background-color: #990000;
-    &:hover {
-     border: 1px solid #990000;
-    }
-   `;
-  props.className.includes("burntsienna") &&
-   css`
-    background-color: #e97451;
+ &.burntumber {
+  background-color: #6e260e;
+   &:hover {
+    border: 1px solid #6e260e;
+   }
+  }
+
+ &.crimsonred {
+  background-color: #990000;
+   &:hover {
+    border: 1px solid #990000;
+   }
+  }
+  
+  &.burntsienna {
+   background-color: #e97451;
     &:hover {
      border: 1px solid #e97451;
     }
-   `;
-  props.className.includes("yellowochre") &&
-   css`
-    background-color: #cb9d06;
+   }
+  
+  &.yellowochre {
+   background-color: #cb9d06;
     &:hover {
      border: 1px solid #cb9d06;
     }
-   `;
-  props.className.includes("prussianblue") &&
-   css`
-    background-color: #003153;
+   }
+  
+  &.prussianblue {
+   background-color: #003153;
     &:hover {
      border: 1px solid #003153;
     }
-   `;
-  props.className.includes("cobaltblue") &&
-   css`
-    background-color: #0047ab;
+   }
+
+  &.cobaltblue {
+   background-color: #0047ab;
     &:hover {
      border: 1px solid #0047ab;
     }
-   `;
- }}
+   }
    
  &:hover {
   border-radius: 1rem;
@@ -153,7 +149,7 @@ export const Colors = styled.div`
    opacity: 1;
   }
  } 
-`;
+ `;
 
 export const BtnColor = styled(Button)`
  display: none;
@@ -267,33 +263,27 @@ export const StyledCarouselRadio = styled(CarouselRadio)`
   transform: scale(1.8);
   cursor: pointer;
  }
-`;
-
-/*  export const RadiosButtonIcon = styled(ButtonIcon)`
- ${(props) => {
-  props.id === "radio1" &&
-  css`
-   left: 44%;
-  `;
-  props.id === "radio2" &&
-  css`
-   left: 47%;
-  `;
-  props.id === "radio3" &&
-  css`
-   left: 50%;
-  `;
-  props.id === "radio4" &&
-  css`
-   left: 53%;
-  `;
-  props.id === "radio5" &&
-  css`
-   left: 56%;
-  `;
+ 
+ &.radio1 {
+  left: 44%;
  }
- }  
-`; */ 
+
+ &.radio2 {
+  left: 47%;
+ }
+
+ &.radio3 {
+  left: 50%;
+ }
+
+ &.radio4 {
+  left: 53%;
+ }
+
+ &.radio5 {
+  left: 56%;
+ }
+`;
 
 export const FaSquare = styled.i`
  color: white;
@@ -304,12 +294,13 @@ export const FaSquare = styled.i`
  }
 `;
 
-/*  export const ArrowsButtonIcon = styled(ButtonIcon)`
+export const LeftArrowButtonIcon = styled(ButtonIcon)`
  opacity: 0.7;
  position: absolute;
  top: 50%;
  transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
  animation: ${fadeInArrowsRadios} 2s; 
+ right: 101%;
 
  &:hover {
   transform: scale(1.8);
@@ -326,16 +317,31 @@ export const FaSquare = styled.i`
   color: #dd5350;
  }
  }
+`;
 
- ${(props) => {
-  props.id === "leftArrow" &&  css`
-  right: 101%;
-  `;
-  props.id === "rightArrow" && css`
-  left: 101%;
-  `;
-  }
+export const RightArrowButtonIcon = styled(ButtonIcon)`
+ opacity: 0.7;
+ position: absolute;
+ top: 50%;
+ transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+ animation: ${fadeInArrowsRadios} 2s; 
+ left: 101%;
+
+ &:hover {
+  transform: scale(1.8);
+  cursor: pointer;
+ } 
+
+ & .fas {
+ color: white;
+ transition: color 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+ }
+
+ &:hover{
+  & .fas {
+  color: #dd5350;
+ }
  }
 `;
- */
+ 
  

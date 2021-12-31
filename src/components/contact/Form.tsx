@@ -1,7 +1,7 @@
 import React from "react";
 import {MainContact, StyledForm, StyledLabel, StyledInput, StyledTextArea, BtnSubmit} from "../../styled-components/contact.style";
 
-function Form(props) {
+function Form() {
   return (
     <MainContact>
       <StyledForm action="https://formspree.io/f/xyylqqkn" method="post">

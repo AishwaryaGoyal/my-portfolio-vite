@@ -7,14 +7,18 @@ import BigImage from "../components/work/BigImage";
 import images from "../components/work/Images";
 import {Container as WorkContainer} from "../App.style";
 
-function Work(props) {
+interface WorkProps {
+  onWork?:string;
+}
+
+function Work(props:WorkProps) {
   const [srcBigImage, setSrcBigImage] = useState(null);
 
-  function clickImage(e) {
+  function clickImage(e:Event) {
     setSrcBigImage(e.target.src);
   }
 
-  function btnCloseClicked(e) {
+  function btnCloseClicked(e:Event) {
     setSrcBigImage(null);
   }
 

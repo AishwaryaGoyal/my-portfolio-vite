@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import ButtonIcon from "../common/ButtonIcon";
 import images from "./Images";
-import {TransparentDiv, BigImage as StyledBigImage, CloseBtn, ArrowBtns} from "../../styled-components/work.style";
+import {TransparentDiv, BigImage as StyledBigImage, CloseBtn, LeftArrowBtn, RightArrowBtn} from "../../styled-components/work.style";
 
-function BigImage(props) {
+interface BigImageProps {
+src: string;
+btnCloseClicked(e:Event):void;
+}
+
+function BigImage(props:BigImageProps) {
   const [imageSrc, setImageSrc] = useState(props.src);
   const noOfImages = images.length;
 
@@ -26,17 +30,20 @@ function BigImage(props) {
       <TransparentDiv />
       <StyledBigImage>
         <img src={imageSrc} alt="Big size" />
+
         <CloseBtn
           id="closeBtn"
           onClick={props.btnCloseClicked}
           iClassNames="far fa-window-close fa-2x"
         />
-        <ArrowBtns
+
+        <LeftArrowBtn
           id="leftArrowBig"
           onClick={leftArrowBigClicked}
           iClassNames="fas fa-arrow-alt-circle-left fa-3x"
         />
-        <ArrowBtns
+        
+        <RightArrowBtn
           id="rightArrowBig"
           onClick={rightArrowBigClicked}
           iClassNames="fas fa-arrow-alt-circle-right fa-3x"

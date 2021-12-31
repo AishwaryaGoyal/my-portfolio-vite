@@ -1,6 +1,12 @@
 import React from "react";
 
-function Button(props) {
+interface ButtonProps {
+  className:string;
+  id?:string;
+  text:string;
+}
+
+function Button(props:ButtonProps) {
   return (
     <button className={props.className} type="button" id={props.id}>
       {props.text}

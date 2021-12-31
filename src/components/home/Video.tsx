@@ -1,7 +1,12 @@
 import React from "react";
 import {VideoContainer, IFrame} from "../../styled-components/home.style"
 
-function Video(props) {
+interface VideoProps {
+ title: string;
+ src:string;
+}
+
+function Video(props:VideoProps) {
   return (
     <VideoContainer>
       <IFrame title={props.title} src={props.src} height="430"></IFrame>

@@ -2,7 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {StyledHeaderMiddle, HeaderMiddleButtons} from "../../App.style";
 
-function HeaderMiddle(props) {
+interface HeaderMiddleProps {
+  onHome?:string;
+  onWork?:string;
+  onAbout?:string;
+}
+
+function HeaderMiddle(props:HeaderMiddleProps) {
   return (
     <StyledHeaderMiddle>
       <HeaderMiddleButtons to="/" className={`home-btn ${props.onHome}`}>

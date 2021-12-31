@@ -32,7 +32,7 @@ export const ImgVideoContainer = styled.div`
  }
 `;
 
-const fadeInTrans = keyframes`
+const fadeInAnimation = keyframes`
  from {
   opacity: 0;
  }
@@ -49,7 +49,7 @@ export const TransparentDiv = styled.div`
  top: 0;
  width: 100%;
  height: 100%;
- animation: ${fadeInTrans} 2s;  
+ animation: ${fadeInAnimation} 2s;  
 `;
 
 const imageLoad = keyframes`
@@ -111,20 +111,13 @@ const fadeInArrows = keyframes`
  }
 `;
 
-export const ArrowBtns = styled(ButtonIcon)`
+export const LeftArrowBtn = styled(ButtonIcon)`
  position: absolute;
  top: 45%;
  transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
  animation: ${fadeInArrows} 2s; 
- ${(props) => {
-     props.id === "leftArrowBig" && css`
-      right: 85%;
-     `;
-     props.id === "rightArrowBig" && css`
-      left: 85%;
-     `;
-   }
- }
+ right: 85%;
+    
 
  &:hover {
   transform: scale(1.8);
@@ -137,10 +130,24 @@ export const ArrowBtns = styled(ButtonIcon)`
   color: white;
   transition: color 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
  }
-
 `;
 
+export const RightArrowBtn = styled(ButtonIcon)`
+ position: absolute;
+ top: 45%;
+ transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+ animation: ${fadeInArrows} 2s; 
+ left: 85%;
 
-/*
+ &:hover {
+  transform: scale(1.8);
+  & .fas {
+   color: #fdde8a;
+  }
+ }
 
-*/
+ & .fas {
+  color: white;
+  transition: color 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+ }
+`;

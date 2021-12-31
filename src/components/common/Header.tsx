@@ -4,7 +4,13 @@ import HeaderMiddle from "./HeaderMiddle";
 import HeaderEnd from "./HeaderEnd";
 import {StyledHeader} from "../../App.style";
 
-function Header(props) {
+interface HeaderProps {
+  onHome?:string;
+  onWork?:string;
+  onAbout?:string;
+}
+
+function Header(props:HeaderProps) {
   return (
     <StyledHeader>
       <HeaderStart />

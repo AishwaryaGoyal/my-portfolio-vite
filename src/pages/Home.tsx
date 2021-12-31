@@ -7,7 +7,11 @@ import Carousel from "../components/home/Carousel";
 import Footer from "../components/common/Footer";
 import {Container as HomeContainer} from "../App.style";
 
-function Home(props) {
+interface HomeProps {
+  onHome?:string;
+}
+
+function Home(props:HomeProps) {
   return (
     <HomeContainer>
       <HeaderHandheld />

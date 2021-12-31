@@ -1,7 +1,13 @@
 import React from "react";
 import {StyledHeaderHandheld, BtnTopHandheld, BtnMenu, BtnMenuDrop} from "../../App.style";
 
-function HeaderHandheld(props) {
+interface HeaderHandheldProps {
+onWork?:string;
+onContact?:string;
+}
+
+
+function HeaderHandheld(props:HeaderHandheldProps) {
   function menuClick() {
     const header = document.querySelector(".header-handheld");
     const menuBtns = document.querySelectorAll(".btn-menu-drop");

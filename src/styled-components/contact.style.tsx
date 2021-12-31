@@ -1,4 +1,4 @@
-import styled, {css, keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const heartAnimation = keyframes`
  0% {
@@ -22,36 +22,34 @@ const heartAnimation = keyframes`
  }
 `;
 
-export const StyledHeart = styled.i`
- color: #dd5350;
- ${(props) => {
-   props.className.includes("heart1") && css`
-    left: 10%;
-    position: absolute;
-    animation: ${heartAnimation} 10s steps(5, jump-start) 1s infinite;
-    `;
-    props.className.includes("heart2") && css`
-     left: 20%;
-     position: absolute;
-     animation: ${heartAnimation} 25s steps(5, jump-start) 5s infinite;
-    `;
-    props.className.includes("heart3") && css`
-  "   left: 30%;
-     position: absolute;
-     animation: ${heartAnimation} 5s steps(5, jump-start) 0s infinite;
-    `;
-    props.className.includes("heart4") && css`
-     left: 75%;
-     position: absolute;
-     animation: ${heartAnimation} 20s steps(5, jump-start) 3s infinite;
-    `;
-    props.className.includes("heart5") && css`
-     left: 90%;
-     position: absolute;
-     animation: ${heartAnimation} 15s steps(5, jump-start) 2s infinite;
-    `;
-  }
- }
+export const StyledHeart1 = styled.i`
+ left: 10%;
+ position: absolute;
+ animation: ${heartAnimation} 10s steps(5, jump-start) 1s infinite;
+`;
+
+export const StyledHeart2 = styled.i`
+ left: 20%;
+ position: absolute;
+ animation: ${heartAnimation} 25s steps(5, jump-start) 5s infinite;
+`;
+
+export const StyledHeart3 = styled.i`
+ left: 30%;
+ position: absolute;
+ animation: ${heartAnimation} 5s steps(5, jump-start) 0s infinite;
+`;
+
+export const StyledHeart4 = styled.i`
+ left: 75%;
+ position: absolute;
+ animation: ${heartAnimation} 20s steps(5, jump-start) 3s infinite;
+`;
+
+export const StyledHeart5 = styled.i`
+ left: 90%;
+ position: absolute;
+ animation: ${heartAnimation} 15s steps(5, jump-start) 2s infinite;
 `;
 
 export const MainContact = styled.div`
