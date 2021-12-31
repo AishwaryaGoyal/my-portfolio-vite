@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSquare } from "../../styled-components/home.style";
+import { FaSquare } from "../../styled-components/carouselFaSquare.style"
 
 interface ButtonIconProps {
   id?:string;

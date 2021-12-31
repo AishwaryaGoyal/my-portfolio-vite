@@ -7,9 +7,9 @@ import {Carousel as DivCarousel, StyledCarouselRadio, LeftArrowButtonIcon, Right
 function Carousel() {
   const totalImages = radioButtons.length;
 
-  let currentRadioId = "radio1",
-    currentRadioNumber = 0;
-  let currentImage:HTMLElement;
+  let currentRadioId:string = "radio1",
+    currentRadioNumber:number = 0;
+  let currentImage:HTMLImageElement;
   let timeoutId:NodeJS.Timeout;
 
   /* useEffect(() => {
@@ -49,7 +49,7 @@ function Carousel() {
       (radio) => radio.id === currentRadioId
     );
 
-    currentImage.key = images[currentRadioNumber].key;
+   // currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
     currentImage.alt = images[currentRadioNumber].alt;
 
@@ -74,7 +74,7 @@ function Carousel() {
     currentRadioNumber = radioButtons.findIndex(
       (radio) => radio.id === currentRadioId
     );
-    currentImage.key = images[currentRadioNumber].key;
+    //currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
     currentImage.alt = images[currentRadioNumber].alt;
   }
@@ -98,7 +98,7 @@ function Carousel() {
     currentRadioNumber = radioButtons.findIndex(
       (radio) => radio.id === currentRadioId
     );
-    currentImage.key = images[currentRadioNumber].key;
+   // currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
     currentImage.alt = images[currentRadioNumber].alt;
   }

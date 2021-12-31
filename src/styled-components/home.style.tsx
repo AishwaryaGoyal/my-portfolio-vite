@@ -86,6 +86,46 @@ export const WorkMain = styled.main`
  }
 `;
 
+export const VideoContainer = styled.div`
+ margin: 2rem 4rem 3rem 4rem;
+ border-radius: 2rem;
+ background-color: black;
+ &:hover {
+  & iframe {
+   opacity: 0.6;
+  }
+ }
+
+ @media (max-width: 390px) {
+  margin-bottom: 1.1rem;
+ }
+`;
+
+export const IFrame = styled.iframe`
+ border-radius: 2rem;
+ box-shadow: 0.5rem 0.5rem 1rem 1rem black;
+ transition: opacity 1s;
+
+ @media (max-width: 390px) {
+   height: 410px;
+ }
+`;
+
+export const ExplanationWork = styled.div`
+ text-align: justify;
+ text-justify: auto;
+ font-family: "Zen Antique Soft";
+ margin: 2rem;
+
+ @media (max-width: 960px) {
+  margin-top: 0;
+ }
+
+ @media (max-width: 390px) {
+  margin-top: 0;
+ }
+`;
+
 export const Colors = styled.div`
  display: inline-block;
  position: relative;
@@ -160,44 +200,6 @@ export const BtnColor = styled(Button)`
  transition: opacity 0.5s ease-in-out;
  width: 130px;
  height: 25px;
-`;
-
-export const VideoContainer = styled.div`
- margin: 2rem 4rem 3rem 4rem;
- border-radius: 2rem;
- background-color: black;
- &:hover {
-  & iframe {
-   opacity: 0.6;
-  }
- }
-
- @media (max-width: 390px) {
-  margin-bottom: 1.1rem;
- }
-`;
-
-export const IFrame = styled.iframe`
- border-radius: 2rem;
- box-shadow: 0.5rem 0.5rem 1rem 1rem black;
- transition: opacity 1s;
-`;
-
-export const ExplanationWork = styled.div`
- text-align: justify;
- text-justify: auto;
- font-family: "Zen Antique Soft";
- margin: 2rem;
-
- @media (max-width: 960px) {
-  margin-top: 0;
-  text-align: center;
- }
-
- @media (max-width: 390px) {
-  margin-top: 0;
-  text-align: center;
- }
 `;
 
 export const AllColorsText = styled.span`
@@ -283,15 +285,24 @@ export const StyledCarouselRadio = styled(CarouselRadio)`
  &.radio5 {
   left: 56%;
  }
-`;
 
-export const FaSquare = styled.i`
- color: white;
- background-clip: content-box;
- background-color: transparent; 
- &.clicked {
-  background-color: white;
- }
+ @media (max-width: 960px) {
+  &.radio1 {
+   left: 36%;
+  }
+  &.radio2 {
+   left: 44%;
+  }
+  &.radio3 {
+   left: 52%;
+  }
+  &.radio4 {
+   left: 60%;
+  }
+  &.radio5 {
+   left: 68%;
+  }
+}
 `;
 
 export const LeftArrowButtonIcon = styled(ButtonIcon)`
@@ -315,7 +326,7 @@ export const LeftArrowButtonIcon = styled(ButtonIcon)`
  &:hover{
   & .fas {
   color: #dd5350;
- }
+  }
  }
 `;
 

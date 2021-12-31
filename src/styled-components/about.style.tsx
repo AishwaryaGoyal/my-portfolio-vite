@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../components/common/Button";
 
 export const MainContent = styled.div`
  grid-column: 1/ -1;
@@ -10,7 +11,7 @@ export const MainContent = styled.div`
  align-items: center;
 
  @media (max-width: 960px) {
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin: 0.5rem;
  }
  
@@ -76,10 +77,10 @@ export const AboutParas = styled.p`
   border-radius: 1rem;
 `;
 
- export const BtnContact = styled.button`
+ export const BtnContactMe = styled(Button)`
   color: white;
   background-color: #dd5350;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 1rem 3rem;
   border-radius: 0.2rem;
   align-self: flex-start;
   margin-top: 1rem;

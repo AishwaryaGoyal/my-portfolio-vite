@@ -4,7 +4,7 @@ import {VideoContainer, IFrame} from "../../styled-components/home.style"
 interface VideoProps {
  title: string;
  src:string;
-}
+ }
 
 function Video(props:VideoProps) {
   return (

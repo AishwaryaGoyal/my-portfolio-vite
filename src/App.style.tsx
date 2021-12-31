@@ -354,26 +354,5 @@ export const BtnMenuDrop = styled(Link)`
   .btn-menu-drop {
     display: none;
   }
-
-@media (max-width: 960px) {
-  #radio1 {
-    left: 36%;
-  }
-
-  #radio2 {
-    left: 44%;
-  }
-
-  #radio3 {
-    left: 52%;
-  }
-
-  #radio4 {
-    left: 60%;
-  }
-
-  #radio5 {
-    left: 68%;
-  }
-}
 */
+

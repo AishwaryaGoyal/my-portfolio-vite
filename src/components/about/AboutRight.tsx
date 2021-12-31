@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../common/Button";
-import {AboutRight as Right, AboutParas} from "../../styled-components/about.style"
+import {AboutRight as Right, AboutParas, BtnContactMe} from "../../styled-components/about.style"
 
 function AboutRight() {
   return (
@@ -37,7 +37,7 @@ function AboutRight() {
 
       <h1>Aishwarya Goyal</h1>
       <Link to="/contact">
-        <Button text="Contact Me" />
+        <BtnContactMe text="Contact Me" />
       </Link>
     </Right>
   );
